@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Web Development</title>
+    <style>
+        /* Basic styling for the button and div */
+        #content {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Intermediate Web Development</h1>
+    
+    <button onclick="addHelloWorld()">Click me</button>
+    
+    <div id="content"></div>
+
+    <script>
+        let count = 0;
+        function addHelloWorld() {
+            // Get the div element by its ID
+            const contentDiv = document.getElementById('content');
+
+            // Create a new paragraph element
+            const newParagraph = document.createElement('p');
+            
+            // Set the text content of the paragraph to "Hello world"
+            newParagraph.textContent = "Hello world";
+            
+            // Append the new paragraph to the content div
+            contentDiv.appendChild(newParagraph);
+
+            console.log('Debug: there are now ' + ++count + ' messages');
+        }
+    </script>
+</body>
+</html>
